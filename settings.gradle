@@ -1,0 +1,59 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        mavenCentral().content {
+            excludeModule("javax.media", "jai_core")
+        }
+        gradlePluginPortal()
+        maven {
+            url = uri("https://mifos.jfrog.io/artifactory/mifosx-gradle-local")
+        }
+    }
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral().content {
+            excludeModule("javax.media", "jai_core")
+        }
+        maven {
+            url = uri("https://mifos.jfrog.io/artifactory/mifosx-gradle-local")
+        }
+        gradlePluginPortal()
+    }
+
+    dependencies {
+        classpath "com.github.ben-manes.versions:com.github.ben-manes.versions.gradle.plugin:0.64.0"
+        classpath "pl.allegro.tech.build.axion-release:pl.allegro.tech.build.axion-release.gradle.plugin:1.21.4"
+    }
+}
+
+rootProject.name = "mifos-conventions-gradle-config"
+
+include(":mifos-conventions-gradle-config-asciidoc")
+project(":mifos-conventions-gradle-config-asciidoc").projectDir = file("${rootDir}/modules/gradle/config/asciidoc")
+include(":mifos-conventions-gradle-config-checkstyle")
+project(":mifos-conventions-gradle-config-checkstyle").projectDir = file("${rootDir}/modules/gradle/config/checkstyle")
+include(":mifos-conventions-gradle-config-compose")
+project(":mifos-conventions-gradle-config-compose").projectDir = file("${rootDir}/modules/gradle/config/compose")
+include(":mifos-conventions-gradle-config-docker")
+project(":mifos-conventions-gradle-config-docker").projectDir = file("${rootDir}/modules/gradle/config/docker")
+include(":mifos-conventions-gradle-config-eclipse")
+project(":mifos-conventions-gradle-config-eclipse").projectDir = file("${rootDir}/modules/gradle/config/eclipse")
+include(":mifos-conventions-gradle-config-env")
+project(":mifos-conventions-gradle-config-env").projectDir = file("${rootDir}/modules/gradle/config/env")
+include(":mifos-conventions-gradle-config-jqassistant")
+project(":mifos-conventions-gradle-config-jqassistant").projectDir = file("${rootDir}/modules/gradle/config/jqassistant")
+include(":mifos-conventions-gradle-config-jreleaser")
+project(":mifos-conventions-gradle-config-jreleaser").projectDir = file("${rootDir}/modules/gradle/config/jreleaser")
+include(":mifos-conventions-gradle-config-licenses")
+project(":mifos-conventions-gradle-config-licenses").projectDir = file("${rootDir}/modules/gradle/config/licenses")
+include(":mifos-conventions-gradle-config-lombok")
+project(":mifos-conventions-gradle-config-lombok").projectDir = file("${rootDir}/modules/gradle/config/lombok")
+include(":mifos-conventions-gradle-config-plantuml")
+project(":mifos-conventions-gradle-config-plantuml").projectDir = file("${rootDir}/modules/gradle/config/plantuml")
+include(":mifos-conventions-gradle-config-postgresql")
+project(":mifos-conventions-gradle-config-postgresql").projectDir = file("${rootDir}/modules/gradle/config/postgresql")
+include(":mifos-conventions-gradle-config-spotbugs")
+project(":mifos-conventions-gradle-config-spotbugs").projectDir = file("${rootDir}/modules/gradle/config/spotbugs")
