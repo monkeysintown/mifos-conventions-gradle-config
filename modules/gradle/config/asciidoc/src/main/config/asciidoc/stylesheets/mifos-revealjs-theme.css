@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap');
+
+:root {
+    --r-background-color: #F7F7F3;
+    --r-main-font: 'Open Sans', 'Segoe UI', Helvetica, Arial, sans-serif;
+    --r-main-font-size: 26px;          /* Body 26pt */
+    --r-main-color: #222222;           /* Ink */
+    --r-heading-font: 'Open Sans', 'Segoe UI', Helvetica, Arial, sans-serif;
+    --r-heading-color: #222222;
+    --r-heading-text-transform: none;
+    --r-heading-font-weight: 700;
+    --r-heading1-size: 32px;           /* Title 32pt */
+    --r-heading2-size: 32px;
+    --r-heading3-size: 26px;
+    --r-link-color: #719430;           /* Accent */
+    --r-link-color-hover: #557022;
+    --r-selection-background-color: #719430;
+    --r-selection-color: #F7F7F3;
+}
+
+/* Slide titles: 32pt ink with a single 72px accent rule — the focal mark */
+.reveal h1, .reveal h2 { margin: 0 0 40px; }
+.reveal h1::after, .reveal h2::after {
+    content: ''; display: block;
+    width: 72px; height: 4px; margin-top: 14px;
+    background: #719430;
+}
+.reveal h1::after { margin-left: auto; margin-right: auto; }  /* centred on the title slide */
+
+/* Bullets: em-dash markers, exactly like the template */
+.reveal ul { margin-left: 0; list-style: none; }
+.reveal ul li::before {
+    content: '\2014\00a0\00a0';
+    color: #222222;
+    display: inline-block; width: 1.3em; margin-left: -1.3em;
+}
+
+/* Text roles */
+.reveal .muted  { color: #666666; }
+.reveal .soft   { color: #919191; }
+.reveal .accent { color: #719430; }
+.reveal .caption { color: #919191; font-size: 16px; margin-top: 28px; }  /* Caption 16pt */
+
+/* Big statement: one takeaway, nothing else on the slide */
+.reveal section.bigstatement { text-align: center; }
+.reveal section.bigstatement h2 { display: none; }
+.reveal section.bigstatement p { font-size: 46px; font-weight: 800; line-height: 1.25; }
+.reveal section.bigstatement strong { color: #719430; }
+
+/* Two-column layout (used via a raw HTML passthrough block) */
+.reveal .two-col { display: flex; gap: 2.5em; text-align: left; }
+.reveal .two-col > div { flex: 1; }
+.reveal .two-col h3 {
+    font-size: 24px; color: #666666;
+    border-bottom: 2px solid #719430;
+    padding-bottom: 10px; margin: 0 0 18px;
+}
+
+/* Tables: the one place the 22pt minimum is waived */
+.reveal table { font-size: 16px; margin: 0 auto; border-collapse: collapse; }
+.reveal table th {
+    background: transparent; color: #222222; font-weight: 700;
+    border-bottom: 2px solid #719430; padding: 10px 14px;
+}
+.reveal table td { border-bottom: 1px solid #E3E3DB; padding: 10px 14px; }
+
+/* Diagrams: drop in draw.io exports, no border or shadow */
+.reveal section img { background: none; border: none; box-shadow: none; margin: 0 auto; }
+
+/* Thank-you slide */
+.reveal section.thankyou { text-align: center; }
+.reveal section.thankyou h2::after { margin-left: auto; margin-right: auto; }
+
+/* Chrome: soft slide number, accent progress bar */
+.reveal .slide-number, .reveal .slide-number a {
+    background: transparent; color: #919191; font-size: 16px;
+}
+.reveal .progress { color: #719430; height: 3px; }
