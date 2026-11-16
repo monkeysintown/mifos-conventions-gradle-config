@@ -16,4 +16,5 @@
     <suppress files="[/\\]camunda7[/\\]" checks=".*"/>
     <suppress files="[/\\]camunda8[/\\]" checks=".*"/>
     <suppress files="[/\\]operaton[/\\]" checks=".*"/>
+    <suppress-xpath checks="MissingJavadoc(Method|Type)" files=".*\.java"/>
 </suppressions>
