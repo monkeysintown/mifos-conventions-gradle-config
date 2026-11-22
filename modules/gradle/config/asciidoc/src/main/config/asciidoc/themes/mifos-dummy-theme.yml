@@ -51,8 +51,11 @@ font:
       bold: NotoSans-Bold.ttf
       bold_italic: NotoSans-BoldItalic.ttf
     NotoMono:
+      # Noto Sans Mono has no italic faces; without these entries, code in italic or bold italic text fails
       normal: NotoSansMono-Regular.ttf
+      italic: NotoSansMono-Regular.ttf
       bold: NotoSansMono-Bold.ttf
+      bold_italic: NotoSansMono-Bold.ttf
 
 # ============================================================
 # PAGE
